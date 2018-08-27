@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="prime-numbers:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/prime_numbers_jar</output-path>
+    <root id="archive" name="prime-numbers.jar">
+      <element id="module-output" name="prime-numbers" />
+    </root>
+  </artifact>
+</component>

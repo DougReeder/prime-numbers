@@ -24,3 +24,7 @@ pids
 *.pid.lock
 
 *.class
+
+!out/
+out/*
+!out/artifacts
