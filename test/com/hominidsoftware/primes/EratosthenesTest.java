@@ -49,4 +49,13 @@ class EratosthenesTest {
         List<Integer> largerPrimes = new ArrayList<Integer>(Arrays.asList(7901, 7907, 7919));
         assertEquals(largerPrimes, primes);
     }
+
+
+    @Test
+    void should_allow_swapped_arguments() {
+        List<Integer> primes = eratosthenes.generate(7920, 7900);
+
+        List<Integer> largerPrimes = new ArrayList<Integer>(Arrays.asList(7901, 7907, 7919));
+        assertEquals(largerPrimes, primes);
+    }
 }

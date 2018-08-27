@@ -10,6 +10,11 @@ public class Eratosthenes implements PrimeNumberGenerator {
         if (startingValue < 0 || endingValue < 0) {
             throw new IllegalArgumentException("endpoints must be 0 or greater");
         }
+        if (startingValue > endingValue) {
+            int temp = endingValue;
+            endingValue = startingValue;
+            startingValue = temp;
+        }
 
         // sieves
         BitSet sieve = new BitSet(endingValue+1);
