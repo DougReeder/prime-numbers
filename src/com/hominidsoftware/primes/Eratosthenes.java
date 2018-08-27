@@ -15,6 +15,9 @@ public class Eratosthenes implements PrimeNumberGenerator {
             endingValue = startingValue;
             startingValue = temp;
         }
+        if (endingValue < 2) {   // below code throws error if endingValue is 0
+            return new ArrayList<Integer>();
+        }
 
         // sieves
         BitSet sieve = new BitSet(endingValue+1);
