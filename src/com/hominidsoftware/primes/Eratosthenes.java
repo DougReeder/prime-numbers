@@ -11,6 +11,7 @@ public class Eratosthenes implements PrimeNumberGenerator {
             throw new IllegalArgumentException("endpoints must be 0 or greater");
         }
 
+        // sieves
         BitSet sieve = new BitSet(endingValue+1);
         sieve.set(2, endingValue+1);
 
@@ -21,8 +22,9 @@ public class Eratosthenes implements PrimeNumberGenerator {
             }
         }
 
+        // converts to output format
         List<Integer> primes = new ArrayList<>();
-        for (int i = sieve.nextSetBit(0); i >= 0; i = sieve.nextSetBit(i+1)) {
+        for (int i = sieve.nextSetBit(startingValue); i >= 0; i = sieve.nextSetBit(i+1)) {
             primes.add(i);
         }
         return primes;

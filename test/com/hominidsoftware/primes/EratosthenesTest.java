@@ -33,4 +33,20 @@ class EratosthenesTest {
         List<Integer> smallPrimes = new ArrayList<Integer>(Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19));
         assertEquals(smallPrimes, primes);
     }
+
+    @Test
+    void should_honor_startingValue() {
+        List<Integer> primes = eratosthenes.generate(11, 19);
+
+        List<Integer> smallPrimes = new ArrayList<Integer>(Arrays.asList(11, 13, 17, 19));
+        assertEquals(smallPrimes, primes);
+    }
+
+    @Test
+    void should_work_for_larger_ranges() {
+        List<Integer> primes = eratosthenes.generate(7900, 7920);
+
+        List<Integer> largerPrimes = new ArrayList<Integer>(Arrays.asList(7901, 7907, 7919));
+        assertEquals(largerPrimes, primes);
+    }
 }
