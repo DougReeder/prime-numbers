@@ -80,4 +80,15 @@ class EratosthenesTest {
 
         assertEquals(new ArrayList<Integer>(), primes);
     }
+
+
+    @Test
+    void should_identify_prime() {
+        assertEquals(true, eratosthenes.isPrime(29));
+    }
+
+    @Test
+    void should_identify_nonprime() {
+        assertEquals(false, eratosthenes.isPrime(30));
+    }
 }

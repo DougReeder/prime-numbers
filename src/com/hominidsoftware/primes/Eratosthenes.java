@@ -40,6 +40,7 @@ public class Eratosthenes implements PrimeNumberGenerator {
 
     @Override
     public boolean isPrime(int value) {
-        throw new UnsupportedOperationException();
+        List<Integer> primes = generate(value, value);
+        return !primes.isEmpty();
     }
 }
